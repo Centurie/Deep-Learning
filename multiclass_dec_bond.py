@@ -1,3 +1,7 @@
+import torch
+import numpy as np
+import matplotlib.pyplot as plt
+
 def plot_multiclass_decision_boundary(model, X, y):
     x_min, x_max = X[:, 0].min() - 0.1, X[:, 0].max() + 0.1
     y_min, y_max = X[:, 1].min() - 0.1, X[:, 1].max() + 0.1
@@ -12,3 +16,4 @@ def plot_multiclass_decision_boundary(model, X, y):
     plt.scatter(X[:, 0], X[:, 1], c=y, s=40, cmap=plt.cm.RdYlBu)
     plt.xlim(xx.min(), xx.max())
     plt.ylim(yy.min(), yy.max())
+
